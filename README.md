@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-# 📦 Configurando e Executando o Projeto com Docker Compose
-
-Este projeto utiliza **Docker Compose** para gerenciar o backend, frontend, banco de dados MongoDB e a interface web Mongo Express.  
-
-## 🛠 Pré-requisitos
-
-Antes de começar, certifique-se de ter instalado em sua máquina:
-
-- [Docker](https://www.docker.com/get-started)  
-- [Docker Compose](https://docs.docker.com/compose/install/)  
-
-=======
-Claro! Aqui está a documentação completamente em Markdown:
-
-```markdown
 # 📦 Configurando e Executando o Projeto com Docker Compose
 
 Este projeto utiliza **Docker Compose** para gerenciar o backend, frontend, banco de dados MongoDB e a interface web Mongo Express.  
