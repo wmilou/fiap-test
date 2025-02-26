@@ -21,13 +21,41 @@ services:
       - "3000:3000"
       - "4000:4000"
     volumes:
-      - ./src/:/opt/node_app/app/src
+      - ./back_end_src/:/opt/node_app/app/src
       - ./server.js:/opt/node_app/app/server.js
       - ./package.json:/opt/node_app/package.json
     env_file:
       - .env
     depends_on:
       - mongo 
+    networks:
+      - mongo-compose-network
+
+  node-frontend:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        - PATH_TO_CODE=./front_end_src/
+        - NODE_ENV=development
+        - PORT=3001
+    command:
+      - /bin/sh
+      - -c
+      - |
+        echo "------------------ FRONT-END --------------------"
+        npm run start 
+    ports:
+      - "3001:3000"
+      - "4001:4000"
+    volumes:
+      - ./front_end_src/:/opt/node_app/app/
+      - ./front_end_src/package.json:/opt/node_app/package.json
+    env_file:
+      - .env
+    depends_on:
+      - mongo 
+      - node-backend
     networks:
       - mongo-compose-network
 
