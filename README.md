@@ -9,7 +9,6 @@ Antes de começar, certifique-se de ter instalado em sua máquina:
 - [Docker](https://www.docker.com/get-started)  
 - [Docker Compose](https://docs.docker.com/compose/install/)  
 
->>>>>>> efa1fc956388ebc078176894a9354eb7cd41da61
 Verifique se o Docker está instalado corretamente executando:  
 ```sh
 docker --version
